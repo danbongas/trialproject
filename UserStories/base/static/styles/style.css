@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Paytone+One&display=swap');
+
+
+h1 {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+.paytone {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    color: red;
+  }
+
+.lexend{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: red;
+  }
+
+  .container {
+    max-width: 120rem;
+    width: 90%;
+    margin: auto;
+  }
+
+  .bgcontainer{
+    position: relative;
+    clear: none;
+    float: left;
+  }
+
+  .whitebg{
+    background-image: url('Rectangle 6.png');
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    
+  }
+
+  .login{
+    background-image: url('image 1.png');
+    width: 2345.93px;
+    height: 1080px;
+   
+    position: absolute;
+    clear: both;
+    float: none;
+    /* position: absolute;
+    clear: both;
+    float: none;
+    width: 2345.93px;
+    height: 1080px;
+    left: 623.3px; */
+    /* rotate: 90deg;  */
+  }
+
+  
+.mobile-menu {
+  margin-bottom: 3rem;
+}
+
+.mobile-menuItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+  
+.form_recipe{
+  width: 671.1px;
+  height: fit-content;
+  margin-top: 200px;
+  margin-left: 280px;
+  gap: 24px;
+}
+
+
+.form__group {
+  margin-bottom: 2rem;
+  width: 100%;
+ 
+}
+
+.form__split {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form__group label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.form__group input,
+.form__group textarea,
+.form__group select {
+  
+ 
+  padding: 1rem;
+  border-radius: 20px;
+  width: 669px;
+  color: var(--color-light);
+  font-weight: 500;
+ 
+}
+
+
+.form__group_half {
+  margin-bottom: 2rem;
+  width: 45%;
+ 
+}
+
+.form__group_half input,
+.form__group_half textarea,
+.form__group_half select {
+  
+ 
+  padding: 1rem;
+  border-radius: 20px;
+  width: 290px;
+  color: var(--color-light);
+  font-weight: 500;
+ 
+}
+
+
+
+.form__group input .input_field{
+  width: 334px; 
+  font-weight: 500;
+  border-radius: 200px;
+  padding: 1rem;
+}

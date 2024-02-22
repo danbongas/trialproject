@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Paytone+One&display=swap');
+
+
+h1 {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+.paytone {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    color: red;
+  }
+  

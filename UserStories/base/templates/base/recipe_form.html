@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% include  'navbar.html'  %}
+<div class="form_recipe">
+    <h1 class="paytone">New Recipe</h1>
+    <form class="form" method="POST" action="" enctype="multipart/form-data">
+       {% csrf_token %}
+      
+      
+       
+
+       <div class="form__group">
+        <label for="recipe_name" class="lexend">Recipe Name</label>
+         {{form.name}}
+      </div>
+
+      <table>
+        <div class="form__group">
+        <tr>
+          <th>
+          
+            <label for="recipe_serving" class="lexend">Servings</label>
+              <div class="form__group_half">{{form.servings}}</div>
+          </th>  
+            <br/><br/>
+          <th>  
+            <label for="recipe_preparationTime" class="lexend">Preparation</label>
+              <div class="form__group_half">{{form.preparationTime}}</div>
+          </th>    
+        
+        </tr> 
+      </div> 
+      </table>
+
+
+      <div class="form__group">
+        <label for="recipe_foodart" class="lexend">Main Image</label>
+        {{form.foodart}}        
+      </div>
+
+      <div class="form__group">
+        <label for="recipe_ingredients" class="lexend">Ingredients</label>
+        {{form.media}}
+        {{form.ingredients}}        
+      </div>
+      
+      <div class="form__group">
+        <label for="recipe_instructions" class="lexend">Procedure</label>
+        {{form.media}}
+        {{form.instructions}}        
+      </div>
+
+       <input type="Submit" value="Submit" text="Publish Recipe"/>
+    </form>
+</div>
+
+{% endblock content %}

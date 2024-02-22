@@ -1,0 +1,75 @@
+{% extends 'main.html '%}
+
+{% load static %}
+{% block content %}
+
+
+
+{% if page == 'login' %}
+<div class="bgcontainer">    
+
+    <div class="whitebg">
+    <div class="login">
+
+    <div class="container">
+        <div class="layout__box">
+            <div class="layout__boxHeader">
+            <div class="layout__boxTitle">
+    
+    <div style=" margin-left: 280px; margin-top: 243px; gap: 10px; width: hug(241px); height: hug(104.41px);">
+            <form class="form" method="POST" action="">
+                {% csrf_token %}
+            
+                <img src="{% static 'images/Frame8.png' %}">
+                    
+            
+                <br/><br/><br/><br/>
+
+                    <div style="top:488.66px; left:280px; width: hug(288.61px); height: hug(283.38px); gap: 20px;">
+                        {{form.as_p}}
+                        <label class="lexend">E-mail Address</label>
+                        <br/>
+                        <input style="border-radius: 200px; width: 288.61px; height: 37.75px;" type="email" name="email" placeholder="Enter Email"/>
+                        <br/><br/>
+
+                        <label class="lexend">Password:</label>
+                        <br/>
+                        <input style="border-radius: 200px; width: 288.61px; height: 37.75px;" type="password" name="password" placeholder="Enter Password"/>
+                        <br/><br/>
+
+                        <input style="width: 288.61px; height: 37.75px; border-radius: 200px; background-color: red; color: white;" type="submit" value="Login"/>
+                    </div>
+
+                
+            </form>
+
+            <p class="lexend" style="color: black;">Not yet registered?</p>
+            <a class="lexend" href="{% url 'register' %}">SIGN UP NOW!</a>
+        </div> 
+
+        </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    {% else %}
+
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Register"/>
+        </form>
+        <p>Already signed up</p>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+    {% endif %}
+
+   </div></div>
+    
+</div>    
+    
+
+{% endblock content %}

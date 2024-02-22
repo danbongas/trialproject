@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+<header class="layout__boxHeader">
+   <h1>{{recipe.name}}</h1>
+   <br/>
+   <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
+   <a href="{% url 'delete-recipe' recipe.id %}">Delete</a>
+</header>
+    
+<table>
+      <tr>
+        <th class="paytone" style="margin-right: 250px;">Ingredients</th>
+        <th class="paytone" style="margin-left: 250px;">Procedure</th>
+      </tr>
+         
+      <br/>
+      <tr>
+         <td><p class="lexend" >{{recipe.ingredients}}</p></td>
+         <td><p class="lexend">{{recipe.instructions}}</p></td>
+       </tr>
+     
+      </tr>
+</table>
+
+<div>
+</div>
+
+{% endblock %}

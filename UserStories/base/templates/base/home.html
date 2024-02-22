@@ -1,0 +1,72 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+
+{% block content %}
+{% include  'navbar.html'  %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Paytone+One&display=swap" rel="stylesheet">
+<style>
+   .grid-container {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as per your requirement */
+       grid-gap: 10px; /* Adjust the gap between grid items */
+   }
+   .grid-item {
+      
+       padding: 20px; /* Adjust padding as needed */
+       text-align: center;
+       border: 1px solid #ccc; /* Add border for grid items */
+   }
+</style>
+
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+<h1 class="paytone">Hi {{ user.username}} !</h1>
+<br>
+<a class="lexend">This is your Recipe Collection</a>
+
+<div class="home-container">
+   
+   
+   <a href="{% url 'create-recipe' %}" style="left: 1400.5px;top: 331px ;background-color: red; border-radius: 20px; width: 145px; height: 38px;">Create Recipe</a>
+   <br><br>
+   <div class="lexend">
+    <div class="grid-container">
+     {% for recipe in recipes %}
+     
+     <div class="grid-item">    
+      
+        {% if request.user == recipe.creator %}   
+         <!-- <a href="{% url 'update-recipe' recipe.id %}">Edit</a>
+         <a href="{% url 'delete-recipe' recipe.id %}">Delete</a> -->
+        {% endif %}        
+        <a href="{% url 'recipes' recipe.id %}">View</a> 
+        {% if recipe.foodart %}
+         <img src="{{ recipe.foodart.url }}"  alt="Uploaded Image" width="325px" height="150px" radius="12px"/>
+        {% endif %} 
+    
+        <h5><a>Recipe Name: {{recipe.name}}</a>
+         <br>
+         
+         <br>
+          
+         
+        </h5>
+        <small>posted by: {{recipe.creator}}</small>
+        <hr>       
+       
+    
+     </div>
+
+     {% endfor %}
+     </div>
+  </div>
+
+  
+  
+</div>
+
+
+{% endblock content %}
